@@ -1,17 +1,17 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "The next big thing for React!",
+    "description": "Read about the hottest technology on the block.",
+    "content": "If you are familiar with react you will love this new additon to the react family which I have been learning to pass onto you..."
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "The best coding bootcamps",
+    "description": "For those of you who want to polish up their coding knwoledge but are unsure where to go!",
+    "content": "She Codes, Coding Camp XL, University if Birmingham Full Stack Codin Bootcamp, Code in 12 weeks..."
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "What are the challanges facing web developers today?",
+    "description": "Find out from an ndustry expert the challanges facing ",
+    "content": "AI - tje big buzz word. But is it putting developers jobs at risk? Can AI ever truly replace a human brain?"
   }
 ]
