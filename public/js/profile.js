@@ -3,12 +3,14 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector('#post-name').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
-  const postName = document.querySelector('#post-name').value.trim();
+  const content = document.querySelector('#post-content').value.trim();
 
-  if (name && postName && description) {
+
+//Create post
+  if (name && description && content) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
-      body: JSON.stringify({ post_name, needed_funding, description }), //key value pairs
+      body: JSON.stringify({ name, description, content }), //key value pairs
       headers: {
         'Content-Type': 'application/json',
       },
@@ -22,6 +24,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+//Delete post
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
