@@ -103,4 +103,19 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// update user
+router.put('/:id', async (req, res) => {
+  // update a category by its `id` value
+  try {
+    const userData = await User.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    })
+    res.status(200).json(userData)
+ } catch (err) {
+    res.status(500).json(err)
+ }
+});
+
 module.exports = router;
