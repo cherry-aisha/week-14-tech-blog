@@ -19,5 +19,8 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ### Screenshot
 ![Screenshot](/assets/screenshot.png)
 
+### Deployed App
+[Click here to visit the App on Heroku](https://week-14-tech-blogs.herokuapp.com/)
+
 ### Visit The GitHub Repo
 [Click Here to Visit the Github Repo](https://github.com/cherry-aisha/week-14-tech-blog)
