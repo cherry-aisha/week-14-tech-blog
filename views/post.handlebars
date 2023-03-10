@@ -6,7 +6,13 @@
     <p>{{comments}}</p>
   <p>
     <p id="commentField">Comments</p>
-    <span class="comment-content">{{comment_content}}</span>
+    <span class="comment-content">
+    {{#each comments}}
+    <div class="comment">
+    <p>{{comment_content}}</p>
+    </div>
+    {{/each}}
+    </span>
     <button class="btn btn-primary">Post a Comment!</button>
   </p>
 </div>

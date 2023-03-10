@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -7,6 +7,11 @@ router.get('/', withAuth, async (req, res) => {
   // be sure to include its associated Id and Data
   try {
     const postData = await Post.findAll({
+      include: [
+        {
+          model: Comment
+        }
+      ]
   });
     res.status(200).json(postData);
   } catch (err) {
