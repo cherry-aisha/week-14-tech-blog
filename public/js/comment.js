@@ -1,3 +1,5 @@
+console.log("test");
+
 const newCommentHandler = async (event) => {
     event.preventDefault();
   
