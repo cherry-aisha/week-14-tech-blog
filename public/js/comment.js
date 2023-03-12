@@ -1,17 +1,22 @@
 console.log("test");
+const commentButton = document.querySelector("#commentButton");
+const commentInputEl = document.querySelector("#commentInput");
+const formEl = document.querySelector(".commentForm");
 
 const newCommentHandler = async (event) => {
-    event.preventDefault();
+  //event.preventDefault();
   
-    const id = event.target.id.split("_")[2];
-    const commentField = document.getElementById("comment_" + id);
-    const text = commentField.value.trim();
-  
+   const id = formEl.id;
+   console.log(id);
+
+    const text = commentInputEl.value;
+    console.log(text);
+
     if (text) {
       const response = await fetch("/api/comments", {
         method: "POST",
         body: JSON.stringify({
-          text: text,
+          comment_content: text,
           post_id: id,
         }),
         headers: {
@@ -20,14 +25,12 @@ const newCommentHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace("/");
+        //location.reload();
       } else {
         alert(response.statusText);
       }
     }
   };
+
   
-  const forms = document.querySelectorAll(".new-comment-form");
-  forms.forEach((form) => {
-    form.addEventListener("click", newCommentHandler);
-  });
+  commentButton.addEventListener('click', newCommentHandler);

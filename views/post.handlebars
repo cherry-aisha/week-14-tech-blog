@@ -13,7 +13,11 @@
     </div>
     {{/each}}
     </span>
-    <button class="btn btn-primary">Post a Comment!</button>
+    <form class="commentForm" id={{id}}>
+      <label for="comment">Comment</label>
+      <input type="text" id="commentInput"><br><br>
+      <button class="btn btn-primary" id="commentButton">Post a Comment!</button>
+    </form>
   </p>
 </div>
   <script src="/js/comment.js"></script>
